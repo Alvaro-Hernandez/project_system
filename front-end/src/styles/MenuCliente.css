@@ -1,4 +1,5 @@
 .card-container {
+  position: relative;
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
@@ -12,24 +13,41 @@
 
 .card-container .card-img-top {
   width: 100%;
-  height: 200px;
+  height: 210px;
   object-fit: fill;
 }
 
-.card-body {
+.product-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container:hover .product-info {
+  transform: translateY(0);
 }
 
 .card-title,
 .card-text {
   margin-bottom: auto;
+  font-size: 1.2rem;
 }
 
-.card-badge {
+.badge {
   align-self: center;
   margin-top: auto;
+  font-size: 1rem;
+  background-color: #ffa500 !important;
 }
 
 .card-footer {

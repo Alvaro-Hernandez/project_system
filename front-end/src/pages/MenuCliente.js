@@ -175,11 +175,11 @@ function Galeria({ rol }) {
                           src={`data:image/jpeg;base64,${menu.ImagenBase64}`}
                           alt={menu.Nombre}
                         />
-                        <Card.Body>
+                        <div className="product-info">
                           <Card.Title>{menu.Nombre}</Card.Title>
                           <Card.Text>{menu.Descripcion}</Card.Text>
                           <Badge bg="success">Precio: {menu.Precio}</Badge>
-                        </Card.Body>
+                        </div>
                         <Card.Footer>
                           <div className="d-flex justify-content-between align-items-center">
                             <Button
