@@ -22,6 +22,7 @@ function Galeria({ rol }) {
   const [cart, setCart] = useState({});
   const [comentarios, setComentarios] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [showOpiniones, setShowOpiniones] = useState(false);
 
   //Cerrar y abrir modal
   const handleShow = () => setShowModal(true);
@@ -46,6 +47,13 @@ function Galeria({ rol }) {
     (total, item) => total + item.cantidad,
     0
   );
+
+  // Total de Compra
+  const totalCompra = Object.values(cart).reduce(
+    (total, item) => total + item.Precio * item.cantidad,
+    0
+  );
+
   const handleSearchChange = (e) => setSearchQuery(e.target.value);
 
   const addToCart = (menu, amount) => {
@@ -114,7 +122,7 @@ function Galeria({ rol }) {
             </FloatingLabel>
           </Col>
         </Row>
-        <Button variant="secondary" onClick={() => setShowModal(true)}>
+        <Button variant="secondary" onClick={() => setShowOpiniones(true)}>
           {isNaN(calificacionPromedio) ? (
             "No hay opiniones"
           ) : (
@@ -124,7 +132,7 @@ function Galeria({ rol }) {
             </>
           )}
         </Button>
-        <Modal show={showModal} onHide={() => setShowModal(false)}>
+        <Modal show={showOpiniones} onHide={() => setShowOpiniones(false)}>
           <Modal.Header closeButton>
             <Modal.Title>Opiniones</Modal.Title>
           </Modal.Header>
@@ -260,6 +268,7 @@ function Galeria({ rol }) {
           </ListGroup>
         </Modal.Body>
         <Modal.Footer>
+          <h1 className="total">Total = C${totalCompra}</h1>
           <Button variant="secondary" onClick={handleClose}>
             Cerrar
           </Button>
