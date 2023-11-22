@@ -36,21 +36,21 @@ function Header({ rol }) {
                   <Nav.Link
                     as={Link}
                     to="/menucliente"
-                    className="link-unstyled"
+                    className="btn btn-outline-dark ms-2"
                   >
                     Menú
                   </Nav.Link>
                   <Nav.Link
                     as={Link}
                     to="/reservacion"
-                    className="link-unstyled"
+                    className="btn btn-outline-dark ms-2"
                   >
                     Reservaciones
                   </Nav.Link>
                   <Nav.Link
                     as={Link}
                     to="/login"
-                    className="btn btn-outline-light ms-2"
+                    className="btn btn-outline-dark ms-2"
                   >
                     Iniciar sesión
                   </Nav.Link>
@@ -103,29 +103,45 @@ function Header({ rol }) {
               />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                  <Nav.Link as={Link} to="/" className="link-unstyled">
+                  <Nav.Link
+                    as={Link}
+                    to="/"
+                    className="btn btn-outline-dark ms-2"
+                  >
                     Inicio
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/menu" className="link-unstyled">
+                  <Nav.Link
+                    as={Link}
+                    to="/menu"
+                    className="btn btn-outline-dark ms-2"
+                  >
                     Menu
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/empleado" className="link-unstyled">
+                  <Nav.Link
+                    as={Link}
+                    to="/empleado"
+                    className="btn btn-outline-dark ms-2"
+                  >
                     Empleado
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/categoria" className="link-unstyled">
+                  <Nav.Link
+                    as={Link}
+                    to="/categoria"
+                    className="btn btn-outline-dark ms-2"
+                  >
                     Registrar Categoria
                   </Nav.Link>
                   <Nav.Link
                     as={Link}
                     to="/reservacion"
-                    className="link-unstyled"
+                    className="btn btn-outline-dark ms-2"
                   >
                     Registrar Reservaciones
                   </Nav.Link>
                   <Nav.Link
                     as={Link}
                     to="/EstadisticasEmpleado"
-                    className="link-unstyled"
+                    className="btn btn-outline-dark ms-2"
                   >
                     Estadísticas
                   </Nav.Link>
@@ -195,19 +211,31 @@ function Header({ rol }) {
               />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                  <Nav.Link as={Link} to="/" className="link-unstyled">
+                  <Nav.Link
+                    as={Link}
+                    to="/"
+                    className="btn btn-outline-dark ms-2"
+                  >
                     Inicio
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/tipoorden" className="link-unstyled">
+                  <Nav.Link
+                    as={Link}
+                    to="/tipoorden"
+                    className="btn btn-outline-dark ms-2"
+                  >
                     Registrar tipo de orden
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/orden" className="link-unstyled">
+                  <Nav.Link
+                    as={Link}
+                    to="/orden"
+                    className="btn btn-outline-dark ms-2"
+                  >
                     Registrar Orden
                   </Nav.Link>
                   <Nav.Link
                     as={Link}
                     to="/gestionOrden"
-                    className="link-unstyled"
+                    className="btn btn-outline-dark ms-2"
                   >
                     Gestion Orden
                   </Nav.Link>
